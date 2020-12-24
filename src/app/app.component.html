@@ -1,8 +1,16 @@
 <div class="container">
+  <title style="color: brown;">{{ title }}</title>
   <div class="row">
     <div class="col-xs-12">
       <button class="btn btn-info" (click)="onlyOdd = !onlyOdd"> Only show odd numbers
       </button>
+      <br><br>
+      <ul class="list-group">
+        <li class="list-group-item"></li>
+      </ul>
+      <ng-template [ngIf]="onlyOdd">
+        <p>Only Odd Numbers</p>
+      </ng-template>
     </div>
   </div>
 </div>
