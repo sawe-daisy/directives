@@ -6,7 +6,14 @@
       </button>
       <br><br>
       <ul class="list-group">
-        <li class="list-group-item"></li>
+        <div class="even" *ngIf="!onlyOdd">
+        <li class="list-group-item" [ngStyle]="{
+          backgroundColor: n ? 'yellow' : 'transparent'}" *ngFor="let n of evenNumbers">{{ n }}</li>
+        </div>
+        <div class="odd" *ngIf="onlyOdd">
+          <li class="list-group-item" [ngStyle]="{
+            backgroundColor: n ? 'aquamarine' : 'transparent'}" *ngFor="let n of oddNumbers">{{ n }}</li>
+        </div>
       </ul>
       <ng-template [ngIf]="onlyOdd">
         <p>Only Odd Numbers</p>
