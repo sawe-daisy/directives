@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "directives"
+  "defaultProject": "directives",
+  "cli": {
+    "analytics": false
+  }
 }
